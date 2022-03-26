@@ -21,7 +21,13 @@ function getOutputHTML(data) {
 async function renderNotices() {
   const data = await getNotices();
   const outputHTML = getOutputHTML(data);
+  test();
   output.innerHTML = outputHTML;
 }
 
 renderNotices();
+
+function test() {
+  console.log("here");
+  localStorage.setItem("file", true);
+}
