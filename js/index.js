@@ -17,4 +17,5 @@ const noticeStaticData = JSON.stringify([
   },
 ]);
 
-localStorage.setItem("notices", noticeStaticData);
+if (!localStorage.getItem("notices"))
+  localStorage.setItem("notices", noticeStaticData);

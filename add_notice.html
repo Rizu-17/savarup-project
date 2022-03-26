@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Kalma Union Parishad</title>
-    <link rel="stylesheet" href="./project.css" />
+    <link rel="stylesheet" href="./add_notice.css" />
   </head>
   <body>
     <div class="container">
@@ -34,9 +34,10 @@
             <p>Enter Notice Title</p>
             <input class="title" type="text" /><br />
             <p>Enter Notice Body</p>
-            <input class="body" type="text" /><br />
+            <textarea class="body" type="text" rows="3"></textarea><br />
             <button class="submit-button">Submit</button>
           </form>
+          <div class="output"></div>
         </div>
         <div class="picture">
           <img src="Capture.PNG" />
@@ -48,5 +49,6 @@
         </ul>
       </div>
     </div>
+    <script type="module" src="js/add_notice.js"></script>
   </body>
 </html>
