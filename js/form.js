@@ -1,53 +1,68 @@
-let button = document.querySelector('.submit-button');
-let output = document.querySelector('.output');
-let firstname = document.querySelector('.firstname');
-let lastname = document.querySelector('.lastname');
-let p_address = document.querySelector('.p_address');
-let c_address = document.querySelector('.c_address');
-let fname = document.querySelector('.fname');
-let mname = document.querySelector('.mname');
-let gender = document.querySelector('.gender');
-let village = document.querySelector('.village');
-let ward = document.querySelector('.ward');
-let upazilla = document.querySelector('.upazilla');
-let zilla = document.querySelector('.zilla');
-let division = document.querySelector('.division');
-let cont_num = document.querySelector('.cont_num');
-let dob = document.querySelector('.dob');
-let bc_num = document.querySelector('.bc_num');
+let button = document.querySelector(".submit-button");
+let output = document.querySelector(".output");
+let firstname = document.querySelector(".firstname");
+let lastname = document.querySelector(".lastname");
+let p_address = document.querySelector(".p_address");
+let c_address = document.querySelector(".c_address");
+let fname = document.querySelector(".fname");
+let mname = document.querySelector(".mname");
+let gender = document.querySelector(".gender");
+let village = document.querySelector(".village");
+let ward = document.querySelector(".ward");
+let upazilla = document.querySelector(".upazilla");
+let zilla = document.querySelector(".zilla");
+let division = document.querySelector(".division");
+let cont_num = document.querySelector(".cont_num");
+let dob = document.querySelector(".dob");
+let bc_num = document.querySelector(".bc_num");
 
-button.addEventListener('click', handleSubmit);
+button.addEventListener("click", handleSubmit);
 
-function handleSubmit(e){
-    e.preventDefault();
+function handleSubmit(e) {
+  e.preventDefault();
 
-    const outputHTML = getOutputHTML(firstname.value,
-        lastname.value,
-        p_address.value,
-        c_address.value,
-        gender.value,
-        ward.value,
-        village.value,
-        upazilla.value,
-        zilla.value,
-        division.value,
-        fname.value,
-        mname.value,
-        cont_num.value,
-        dob.value,
-        bc_num.value)
-    // console.log('tiplo', item.value);
-    // const test = `<div>${item.value}</div>`
-    // output.innerHTML = outputHTML;
-    // console.log('sfbdh')
-    let  newWin = window.open('', '', 'height=750,width=650');
-    newWin.document.write(outputHTML);
-    newWin.print();
-    newWin.close();
+  const outputHTML = getOutputHTML(
+    firstname.value,
+    lastname.value,
+    p_address.value,
+    c_address.value,
+    gender.value,
+    ward.value,
+    village.value,
+    upazilla.value,
+    zilla.value,
+    division.value,
+    fname.value,
+    mname.value,
+    cont_num.value,
+    dob.value,
+    bc_num.value
+  );
+
+  let newWin = window.open("", "", "height=750,width=650");
+  newWin.document.write(outputHTML);
+  newWin.print();
+  newWin.close();
 }
 
-function getOutputHTML(firstname, lastname, p_address, c_address, gender, ward, village, upazilla, zilla, division, fname, mname, cont_num, dob, bc_num) {
-    return `
+function getOutputHTML(
+  firstname,
+  lastname,
+  p_address,
+  c_address,
+  gender,
+  ward,
+  village,
+  upazilla,
+  zilla,
+  division,
+  fname,
+  mname,
+  cont_num,
+  dob,
+  bc_num
+) {
+  return `
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +124,7 @@ function getOutputHTML(firstname, lastname, p_address, c_address, gender, ward, 
                 Full Name:
             </span>
             <span class="info">
-                ${firstname + ' ' + lastname}
+                ${firstname + " " + lastname}
             </span>
         </div>
         <div class="fname topic">
@@ -242,5 +257,5 @@ function getOutputHTML(firstname, lastname, p_address, c_address, gender, ward, 
     <!-- <script src="js/form.js"></script> -->
 </body>
 </html>
-    `
+    `;
 }

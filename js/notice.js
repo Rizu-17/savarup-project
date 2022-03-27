@@ -18,7 +18,7 @@ function getOutputHTML(data) {
 }
 
 async function renderNotices() {
-  const data = await getNotices();
+  const data = getNotices();
   const outputHTML = getOutputHTML(data);
   output.innerHTML = outputHTML;
 }
