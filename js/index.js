@@ -1,19 +1,18 @@
 const noticeStaticData = JSON.stringify([
   {
     id: 1,
-    title:
-      "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    title: "Birth Certificate Registration",
+    body: "Birth Certificate is online now.DO visti our sites for further information.",
   },
   {
     id: 2,
-    title: "qui est esse",
-    body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+    title: "Corona Vaccination",
+    body: "Come and get vaccine at our office to be safe from Covid 19.",
   },
   {
     id: 3,
-    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-    body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+    title: "26 March",
+    body: "The Independence Day of Bangladesh. Let's celebrate this day.",
   },
 ]);
 
