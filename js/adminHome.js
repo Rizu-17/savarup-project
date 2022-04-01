@@ -10,7 +10,11 @@ function getOutputHTML(data) {
   let outputHTML = "";
   for (let post in data) {
     outputHTML += `<p>
-        <b>${data[post].title}</b>:<br /> ${data[post].body}
+    Notice ID: <span class='notice-id'>${data[post]._id}</span><br/>
+        <b>${data[post].title}</b>:<br /> ${data[post].body}<br/>
+        <a href="./updateNotice.html?id=${data[post]._id}&title=${data[post].title}&body=${data[post].body}">
+        <button class='update-notice'>Edit</button>
+        </a>
       </p>`;
   }
   return outputHTML;

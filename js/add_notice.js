@@ -6,7 +6,6 @@ let output = document.querySelector(".output");
 submit.addEventListener("click", addNewNotice);
 
 function addNoticeToLocalStorage(title, body) {
-  console.log("got", title, body);
   let data = localStorage.getItem("notices");
   let notices = JSON.parse(data);
   notices.push({
@@ -18,7 +17,7 @@ function addNoticeToLocalStorage(title, body) {
   localStorage.setItem("notices", JSON.stringify(notices));
 }
 
-function addNewNotice(e) {
+async function addNewNotice(e) {
   e.preventDefault();
   const notice_title = title.value;
   const notice_body = body.value;
@@ -26,6 +25,16 @@ function addNewNotice(e) {
     output.innerHTML = "<p>Notice Must have a title and body!</p>";
     return;
   }
-  addNoticeToLocalStorage(notice_title, notice_body);
-  output.innerHTML = "<p>Notice Added!</p>";
+
+  try {
+    const res = await axios.post("http://localhost:3000/api/notice", {
+      title: notice_title,
+      body: notice_body,
+    });
+    if (res.status === 201) {
+      output.innerHTML = "<p>Notice Added!</p>";
+    }
+  } catch (err) {
+    output.innerHTML = "<p>Notice Adding Failed!</p>";
+  }
 }

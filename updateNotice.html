@@ -1,7 +1,8 @@
 <html>
   <head>
     <title>Kalma Union Parishad</title>
-    <link rel="stylesheet" href="./project.css" />
+    <link rel="stylesheet" href="./add_notice.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -19,24 +20,28 @@
           </li>
           <li>News</li>
           <li>Important Links</li>
-          <!-- <li>
-            <a href="./add_notice.html"> Add Notice </a>
-          </li> -->
           <li>
-            <a href="./adminLogin.html" class="signup-btn"
-              ><span> Sign In</span></a
+            <a href="./add_notice.html"> Add Notice </a>
+          </li>
+          <li>
+            <a href="./adminHome.html" class="signup-btn"
+              ><span> Admin Home</span></a
             >
           </li>
         </ul>
       </div>
       <div class="banner">
         <div class="text">
-          <h1><b>Savar Union Parishad</b></h1>
-          <p>
-            পশ্চিমে সাভার পৌরসভা+পাথালিয়া<br />সর্ব পশ্চিমে বংশাই নদী<br />উত্তরে
-            আশুলিয়া ইউ:<br />পূর্বে বিরুলিয়া,দক্ষিনে বিরুলিয়া+ বনগাও এবং<br />
-            সাভাল পৌরসভা।
-          </p>
+          <h1><b>Update Notice</b></h1>
+          <form>
+            <p>Enter Notice Title</p>
+            <input class="title" type="text" /><br />
+            <p>Enter Notice Body</p>
+            <textarea class="body" type="text" rows="3"></textarea><br />
+            <button class="submit-button">Submit</button>
+            <button class="delete-button">Delete</button>
+          </form>
+          <div class="output"></div>
         </div>
         <div class="picture">
           <img src="Capture.PNG" />
@@ -48,6 +53,6 @@
         </ul>
       </div>
     </div>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/updateNotice.js"></script>
   </body>
 </html>

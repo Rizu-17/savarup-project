@@ -97,6 +97,15 @@ a:active {
   margin-left: 50px;
   margin-top: 10px;
 }
+.delete-button {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 10px;
+}
 .title,
 .body {
   /* position: relative; */
